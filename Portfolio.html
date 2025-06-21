@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    /* ==== GLOBAL STYLES ==== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #121212 url('https://www.transparenttextures.com/patterns/stardust.png');
+      color: #f0f0f0;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    a {
+      color: #00ffd0;
+      text-decoration: none;
+    }
+
+    section {
+      background-color: rgba(30, 30, 30, 0.9);
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ffd066;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px #00ffd0aa;
+    }
+
+    h1, h2 {
+      color: #00ffd0;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .header {
+      text-align: center;
+    }
+
+    .logo {
+      display: inline-block;
+      border: 2px solid #00ffd0;
+      border-radius: 50%;
+      padding: 20px;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #00ffd0;
+      background: #1a1a1a;
+      box-shadow: 0 0 10px #00ffd055;
+    }
+
+    .about img {
+      max-width: 150px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 3px solid #00ffd0;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skills li {
+      background: #1f1f1f;
+      margin: 5px 0;
+      padding: 8px;
+      border-left: 5px solid #00ffd0;
+    }
+
+    .resume a {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid #00ffd0;
+      border-radius: 5px;
+      color: #00ffd0;
+      transition: background 0.3s;
+    }
+
+    .resume a:hover {
+      background: #00ffd0;
+      color: #121212;
+    }
+
+    .contact p {
+      margin-bottom: 5px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #aaaaaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <section class="header">
+    <div class="logo">Neha</div>
+    <p>Web Developer | Creative Thinker | Tech Enthusiast</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <img src="your-photo.jpg" alt="My photo" />
+    <p>Hello! I'm Neha, a passionate developer with skills in front-end development, user experience design, and creating engaging web experiences. I'm always exploring new technologies and love crafting elegant solutions.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>React.js, Bootstrap</li>
+      <li>Python, Flask</li>
+      <li>Firebase, MongoDB</li>
+      <li>UI/UX Design, Figma</li>
+    </ul>
+  </section>
+
+  <!-- Resume Section -->
+  <section class="resume">
+    <h2>Resume</h2>
+    <a href="resume.pdf" download>Download My Resume (PDF)</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: neharajesh@gmail.com</p>
+    <p>Phone: +91-9876543210</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Neha Rajesh. All rights reserved.
+  </footer>
+
+</body>
+</html>
