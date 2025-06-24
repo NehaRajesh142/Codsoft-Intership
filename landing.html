@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Creative Digital Agency</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #121212 url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: #00fff2;
+    }
+
+    header {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #00fff2;
+    }
+
+    header h1 {
+      color: #00fff2;
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      color: #aaa;
+      font-size: 1rem;
+    }
+
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px;
+      border-bottom: 1px solid #444;
+    }
+
+    nav a {
+      color: #ccc;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00fff2;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), #121212), 
+        url('https://images.unsplash.com/photo-1606760227090-165bd4baf4bb?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    .btn {
+      background: #00fff2;
+      color: #121212;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #00cfc0;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(30, 30, 30, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00fff255;
+      transition: transform 0.3s;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+    }
+
+    h3 {
+      margin-bottom: 15px;
+      color: #00fff2;
+    }
+
+    .features, .services, .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .box {
+      flex: 1 1 30%;
+      background: #1f1f1f;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00fff299;
+    }
+
+    .box img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .why-us li {
+      background: #1c1c1c;
+      padding: 10px 15px;
+      border-left: 5px solid #00fff2;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #999;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Creative Digital Agency</h1>
+    <p>We bring ideas to life through design and technology</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Features</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Crafting Modern & Creative Solutions</h2>
+    <p>Join hundreds of happy clients growing their business online with us.</p>
+    <button class="btn">Explore Services</button>
+  </section>
+
+  <!-- About Section -->
+  <section>
+    <h3>About Us</h3>
+    <p>We are a full-service digital agency offering creative and strategic services for online brands. With a mix of technical expertise and artistic touch, we help you make a lasting digital impact.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section>
+    <h3>Our Services</h3>
+    <div class="services">
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80" alt="Web Design">
+        <h4>Web Design</h4>
+        <p>Beautiful, fast, and responsive websites customized for your brand.</p>
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80" alt="SEO">
+        <h4>SEO Optimization</h4>
+        <p>Rank higher in search results and grow your organic traffic.</p>
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1581091012184-7f3dd20c52b1?auto=format&fit=crop&w=800&q=80" alt="Support">
+        <h4>24/7 Support</h4>
+        <p>Our friendly team is always ready to help you succeed online.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section>
+    <h3>Key Features</h3>
+    <div class="features">
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1508779018996-4807bceac147?auto=format&fit=crop&w=800&q=80" alt="Feature 1">
+        <h4>Mobile-First Design</h4>
+        <p>Everything we build works flawlessly on every device.</p>
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=800&q=80" alt="Feature 2">
+        <h4>Lightning Speed</h4>
+        <p>Our code is optimized for performance and speed.</p>
+      </div>
+      <div class="box">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80" alt="Feature 3">
+        <h4>Secure & Reliable</h4>
+        <p>Top-tier hosting, security and uptime for peace of mind.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section>
+    <h3>What Clients Say</h3>
+    <div class="testimonials">
+      <div class="box">
+        <p class="testimonial-text">"Absolutely amazing work! Our traffic doubled and we love the new design."</p>
+        <p>- Riya Sharma, Startup Founder</p>
+      </div>
+      <div class="box">
+        <p class="testimonial-text">"Very professional, quick to respond and the outcome exceeded expectations."</p>
+        <p>- Arjun Mehta, Digital Marketer</p>
+      </div>
+      <div class="box">
+        <p class="testimonial-text">"They handled our full branding and website — everything looks so modern now!"</p>
+        <p>- Priya Verma, Business Owner</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h3>Contact Us</h3>
+    <ul class="why-us">
+      <li>Email: support@creativedigital.com</li>
+      <li>Phone: +91 9876543210</li>
+      <li>Location: Mumbai, India</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Creative Digital Agency | Designed with 💙 by Neha
+  </footer>
+
+</body>
+</html>
