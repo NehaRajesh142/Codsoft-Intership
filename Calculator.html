@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced Violet Calculator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmgraXZdTY0HingKlPY0vC6IfhKCu1325vCw&s') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      backdrop-filter: blur(2px);
+    }
+
+    .calculator {
+      background: rgba(20, 20, 20, 0.92);
+      padding: 25px;
+      border-radius: 25px;
+      box-shadow: 0 0 20px #9d4edd;
+      width: 320px;
+    }
+
+    .display {
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 10px;
+      text-align: right;
+      min-height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: inset 0 0 5px #000;
+    }
+
+    .display .expression {
+      font-size: 1rem;
+      color: #bbbbbb;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      background-color: #2e2e2e;
+      color: white;
+      transition: 0.2s ease;
+      box-shadow: 0 2px 4px #000;
+    }
+
+    .btn:hover {
+      background-color: #4a4a4a;
+    }
+
+    .btn.operator {
+      background-color: #7b2cbf;
+      grid-row: span 1;
+    }
+
+    .btn.equal {
+      background-color: #9d4edd;
+    }
+
+    .btn.clear {
+      background-color: #b5179e;
+    }
+
+    .btn.zero {
+      grid-column: span 2;
+    }
+
+    .btn.backspace {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="display">
+      <div class="expression" id="expression"></div>
+      <div id="result">0</div>
+    </div>
+    <div class="buttons">
+      <button class="btn clear backspace" onclick="backspace()">⌫</button>
+      <button class="btn" onclick="append('%')">%</button>
+      <button class="btn" onclick="append('.')">.</button>
+      <button class="btn operator" onclick="append('/')">÷</button>
+
+      <button class="btn" onclick="append('7')">7</button>
+      <button class="btn" onclick="append('8')">8</button>
+      <button class="btn" onclick="append('9')">9</button>
+      <button class="btn operator" onclick="append('*')">×</button>
+
+      <button class="btn" onclick="append('4')">4</button>
+      <button class="btn" onclick="append('5')">5</button>
+      <button class="btn" onclick="append('6')">6</button>
+      <button class="btn operator" onclick="append('-')">−</button>
+
+      <button class="btn" onclick="append('1')">1</button>
+      <button class="btn" onclick="append('2')">2</button>
+      <button class="btn" onclick="append('3')">3</button>
+      <button class="btn operator" onclick="append('+')">+</button>
+
+      <button class="btn zero" onclick="append('0')">0</button>
+      <button class="btn equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script>
+    let expression = '';
+    const expressionEl = document.getElementById('expression');
+    const resultEl = document.getElementById('result');
+
+    function append(val) {
+      expression += val;
+      expressionEl.textContent = expression;
+    }
+
+    function backspace() {
+      expression = expression.slice(0, -1);
+      expressionEl.textContent = expression;
+    }
+
+    function calculate() {
+      try {
+        const result = eval(expression);
+        resultEl.textContent = result;
+        expression = result.toString();
+      } catch {
+        resultEl.textContent = 'Error';
+        expression = '';
+      }
+    }
+
+    // Keyboard support
+    document.addEventListener('keydown', function (e) {
+      const allowed = '0123456789+-*/.%';
+      if (allowed.includes(e.key)) {
+        append(e.key);
+      } else if (e.key === 'Enter') {
+        calculate();
+      } else if (e.key === 'Backspace') {
+        backspace();
+      }
+    });
+  </script>
+
+</body>
+</html>
